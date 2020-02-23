@@ -160,6 +160,8 @@ extension EventListVC : UITableViewDelegate {
         
         var duration = 0.0
         let cellIsCollapsed = cellHeights[indexPath.row] == Const.closeCellHeight
+        
+        //collapsed/expand state managed
         if cellIsCollapsed {
             cellHeights[indexPath.row] = Const.openCellHeight
             cell.unfold(true, animated: true, completion: nil)
@@ -169,6 +171,7 @@ extension EventListVC : UITableViewDelegate {
             cell.unfold(false, animated: true, completion: nil)
             duration = 0.8
         }
+        
         
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { () -> Void in
             tableView.beginUpdates()
@@ -204,6 +207,7 @@ extension EventListVC : FSCalendarDataSource, FSCalendarDelegate,FSCalendarDeleg
         self.view.layoutIfNeeded()
     }
     
+    //calendar date changed notifier
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         
         print("did select date \(self.dateFormatter.string(from: date))")
@@ -215,6 +219,7 @@ extension EventListVC : FSCalendarDataSource, FSCalendarDelegate,FSCalendarDeleg
         }
     }
     
+    //calendar page changed notifier
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
         print("\(self.dateFormatter.string(from: calendar.currentPage))")
         self.setFirstWeekDayOnWeekChange();
