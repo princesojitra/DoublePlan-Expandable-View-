@@ -1,0 +1,20 @@
+PODS:
+  - FoldingCell (5.0.2)
+  - FSCalendar (2.8.1)
+
+DEPENDENCIES:
+  - FoldingCell
+  - FSCalendar
+
+SPEC REPOS:
+  trunk:
+    - FoldingCell
+    - FSCalendar
+
+SPEC CHECKSUMS:
+  FoldingCell: f92eb5fb9842319e7cd08c71533c98408b785099
+  FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
+
+PODFILE CHECKSUM: dae7009e39625ae6df6e16751b4010beaa49681a
+
+COCOAPODS: 1.8.4
