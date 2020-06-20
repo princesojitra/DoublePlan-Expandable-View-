@@ -1,1 +1,1 @@
-# DoublePlan-Expandable-View-
+# FoldingCell-Expandable-View-
